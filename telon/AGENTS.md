@@ -10,6 +10,15 @@ las páginas de sus eventos con los componentes de `@telon/ui`. El comprador pag
 - `npm test` (Vitest, todos los paquetes) · `npm run lint` · `npm run typecheck` · `npm run db:reset`.
 - Antes de dar un cambio por bueno: tests, lint y typecheck en verde.
 
+## Flujo de cambios
+
+- Antes de editar, identifica una issue de GitHub que describa el trabajo; si no existe, crea una. Para cambios muy pequeños, la issue puede ser breve, pero no se omite.
+- Actualiza `origin/main` y crea una rama de trabajo antes de modificar archivos. Usa nombres descriptivos como `feat/123-short-description`, `fix/123-short-description` o `docs/123-short-description`.
+- No trabajes ni hagas commits en `main`. No publiques cambios con push directo a `main`; “llevar a producción” significa preparar un PR hacia `main`, enlazar la issue (`Closes #123`) y completar las comprobaciones y revisiones requeridas antes del merge.
+- En el PR resume el cambio y las validaciones ejecutadas. No declares una validación exitosa si no se ejecutó.
+- Si detectas que el trabajo ya se hizo directamente en `main`, no reescribas ni reviertas historia publicada. Abre una issue para el proceso y un PR separado con la corrección necesaria a las instrucciones o al cambio; describe con transparencia qué ya está publicado. No dupliques cambios que ya están en `main`.
+- Si no puedes crear una issue, rama o PR por permisos o por estado del repositorio, detente antes de publicar y explica el bloqueo; no eludas el flujo.
+
 ## Mapa
 
 | Ruta | Qué es |
